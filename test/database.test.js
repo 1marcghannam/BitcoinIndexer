@@ -11,3 +11,5 @@ describe("Connection to database", () => {
     database.end();
   });
 });
+
+//TODO: Add tests for insertTransaction and getTransactions

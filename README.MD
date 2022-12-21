@@ -74,7 +74,7 @@ Before running the indexer, make sure your connection to the database and Bitcoi
 $ npm test
 ```
 
-### 5. Start the indexer
+### 6. Start the indexer
 
 The indexer will save all the transactions with OP_RETURN data from every block. It will keep monitoring new blocks and automatically index them as well.
 
@@ -82,7 +82,7 @@ The indexer will save all the transactions with OP_RETURN data from every block.
 $ npm run indexer
 ```
 
-### 5. Start express server
+### 7. Start express server
 
 To query the transactions by OP_RETURN, start the Express app.
 

@@ -1,7 +1,9 @@
 const log = require("../src/utils/logger");
 const requestRpc = require("../src/utils/rpc");
 const database = require("../src/database/database");
-const indexBlockTransactions = require("../src/utils/indexBlockTransactions");
+const {
+  indexBlockTransactions,
+} = require("../src/utils/indexBlockTransactions");
 const { indexer } = require("../config");
 
 const idleTime = indexer.idleTime;

@@ -7,6 +7,7 @@ const { insertTransaction } = require("../database/database");
 const OP_RETURN_PREFIX = 106;
 
 // OP_RETURN data is stored in the scriptPubKey of the transaction output
+// TODO: Make this function more robust. I need to learn more about the scriptPubKey format and OP codes in bitcoin.
 const getOpReturnData = (scriptPubKey) => {
   const scriptBuffer = Buffer.from(scriptPubKey, "hex");
   const chunks = bitcoin.script.decompile(scriptBuffer);
@@ -45,4 +46,7 @@ const indexBlockTransactions = async (blockHeight) => {
   }
 };
 
-module.exports = indexBlockTransactions;
+module.exports = {
+  indexBlockTransactions,
+  getOpReturnData,
+};
