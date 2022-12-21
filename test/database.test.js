@@ -7,7 +7,7 @@ describe("Connection to database", () => {
           FROM index;
         `;
     const result = await database.query(query);
-    expect(result.rows.length).toBeGreaterThan(0);
+    expect(result.fields.length).toBeGreaterThan(0);
     database.end();
   });
 });
