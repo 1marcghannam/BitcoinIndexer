@@ -34,7 +34,7 @@ const startIndexing = async (startBlock) => {
     log.info(`Indexing transactions on block: ${nextBlockHeight}`);
 
     await indexBlockTransactions(nextBlockHeight);
-    setTimeout(startIndexing, idleTime);
+    startIndexing();
   }
 };
 

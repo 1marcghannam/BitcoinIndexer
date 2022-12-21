@@ -5,7 +5,7 @@ module.exports = {
     host: "localhost",
     database: "test",
     password: "exodus",
-    port: 5432,
+    port: 5434,
   },
   // RPC connection to Bitcoin Core
   rpc: {
@@ -16,7 +16,7 @@ module.exports = {
     port: 38332,
   },
   indexer: {
-    startBlock: 122100, // block to start indexing from
+    startBlock: 120000, // block to start indexing from
     idleTime: 10000, // 10 seconds
   },
   server: {
