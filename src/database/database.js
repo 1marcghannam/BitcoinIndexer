@@ -13,11 +13,6 @@ const insertTransaction = async (
   blockHeight
 ) => {
   const query = `INSERT INTO index (op_return, transactionid, blockhash, blockheight) VALUES ($1, $2, $3, $4) ON CONFLICT (transactionid) DO NOTHING;`;
-  try {
-  } catch (err) {
-    log.error(`Failed to insert transaction: ${transactionId}`, err);
-    throw err;
-  }
   await database.query(query, [
     op_return,
     transactionId,
